@@ -1,0 +1,656 @@
+{
+  "users": [
+    {
+      "id": "d06d",
+      "firstname": "nifras",
+      "lastname": "vp",
+      "email": "mohamadnifras@gmail.com",
+      "password": "123456",
+      "status": true,
+      "cart": [],
+      "orders": [
+        {
+          "name": "nifras",
+          "address": "123 nifras house",
+          "email": "mohamadnifras@gmail.com",
+          "phone": "6238896686",
+          "cartItems": [
+            {
+              "id": "26",
+              "name": "Running Shoe",
+              "category": "women",
+              "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/u/o/v/-original-imah4zhajghy2dvz.jpeg?q=70",
+              "brand": "Under Armour",
+              "price": 2900,
+              "offer": "15%",
+              "size": 10,
+              "stock": 40,
+              "quantity": 1
+            }
+          ],
+          "total": 3045,
+          "date": "12/1/2024, 8:06:04 PM"
+        },
+        {
+          "name": "nifras",
+          "address": "123 nifras house ",
+          "email": "mohamadnifras2004@gmail.com",
+          "phone": "6238896686",
+          "cartItems": [
+            {
+              "id": "2",
+              "name": "casua Shoe",
+              "category": "men",
+              "image": "https://www.superkicks.in/cdn/shop/files/6_850343c4-985f-4377-a4cb-fedb7ba8b703.jpg?v=1725345832&width=600",
+              "brand": "Adidas",
+              "price": 2499,
+              "offer": "20%",
+              "size": 10,
+              "stock": "40",
+              "quantity": 1
+            }
+          ],
+          "total": 2623.95,
+          "date": "12/4/2024, 3:14:35 PM"
+        }
+      ]
+    },
+    {
+      "id": "40af",
+      "firstname": "minhaj",
+      "lastname": "vp",
+      "email": "minhaj@gmail.com",
+      "password": "123456",
+      "status": true,
+      "cart": [],
+      "orders": [
+        {
+          "name": "minhaj",
+          "address": "123 mimhaj house",
+          "email": "minhaj@gmail.com",
+          "phone": "9876543215",
+          "cartItems": [
+            {
+              "id": "8",
+              "name": "casua Shoe",
+              "category": "men",
+              "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/i/a/d/-original-imah4zkrfeh5p6sj.jpeg?q=70",
+              "brand": "Adidas",
+              "price": 2700,
+              "offer": "35%",
+              "size": 9,
+              "stock": 40,
+              "quantity": 1
+            }
+          ],
+          "total": 2835,
+          "date": "11/29/2024, 11:32:59 AM"
+        },
+        {
+          "name": "minhaj",
+          "address": "123minhaj house",
+          "email": "minhaj@gmail.com",
+          "phone": "123456789",
+          "cartItems": [
+            {
+              "id": "36",
+              "name": "Lifestyle Shoe",
+              "category": "women",
+              "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/d/8/b/4-hrx-039-02-4-hrx-by-hrithik-roshan-sky-original-imah4ygdjaajrhqj.jpeg?q=70",
+              "brand": "Nike",
+              "price": 2800,
+              "offer": "15%",
+              "size": 10,
+              "stock": 55,
+              "quantity": 1
+            },
+            {
+              "id": "29",
+              "name": "Sandals",
+              "category": "women",
+              "image": "/shoeimages/women5.jpg",
+              "brand": "Hush Puppies",
+              "price": 1800,
+              "offer": "10%",
+              "size": 7,
+              "stock": 90,
+              "quantity": 1
+            }
+          ],
+          "total": 4830,
+          "date": "12/1/2024, 8:02:48 PM"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "casua Shoes",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/m/p/i/-original-imah4sxtbwfftpfd.jpeg?q=70",
+      "brand": "Nike",
+      "price": "2999",
+      "offer": "30%",
+      "size": 9,
+      "stock": "40"
+    },
+    {
+      "id": "2",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://www.superkicks.in/cdn/shop/files/6_850343c4-985f-4377-a4cb-fedb7ba8b703.jpg?v=1725345832&width=600",
+      "brand": "Adidas",
+      "price": 2499,
+      "offer": "20%",
+      "size": 10,
+      "stock": "40"
+    },
+    {
+      "id": "3",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/5/f/s/-original-imah46kbesfekgu6.jpeg?q=70",
+      "brand": "Nike",
+      "price": 2999,
+      "offer": "25%",
+      "size": 11,
+      "stock": 75
+    },
+    {
+      "id": "4",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://www.superkicks.in/cdn/shop/files/1_1_1.jpg?v=1729157034&width=600",
+      "brand": "Puma",
+      "price": 2699,
+      "offer": "15%",
+      "size": 10,
+      "stock": 60
+    },
+    {
+      "id": "5",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/w/l/u/-original-imah4zhtzcnzf3dv.jpeg?q=70",
+      "brand": "Nike",
+      "price": 2300,
+      "offer": "20%",
+      "size": 9,
+      "stock": 90
+    },
+    {
+      "id": "7",
+      "name": "sneaker  Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/f/f/y/-original-imah4j76hrjtg9uc.jpeg?q=70",
+      "brand": "Nike",
+      "price": 3100,
+      "offer": "30%",
+      "size": 10,
+      "stock": 55
+    },
+    {
+      "id": "8",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/i/a/d/-original-imah4zkrfeh5p6sj.jpeg?q=70",
+      "brand": "Adidas",
+      "price": 2700,
+      "offer": "35%",
+      "size": 9,
+      "stock": 40
+    },
+    {
+      "id": "9",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/i/2/6/-original-imahfgyy6kwjydez.jpeg?q=70",
+      "brand": "Nike",
+      "price": 3300,
+      "offer": "40%",
+      "size": 11,
+      "stock": 30
+    },
+    {
+      "id": "10",
+      "name": "sneakers Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/u/l/n/-original-imah4zmypqdwh7cv.jpeg?q=70",
+      "brand": "Adidas",
+      "price": 4000,
+      "offer": "10%",
+      "size": 12,
+      "stock": 20
+    },
+    {
+      "id": "11",
+      "name": "Running Shoes",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/2/a/f/-original-imah4er8enpaaaur.jpeg?q=70",
+      "brand": "Nike",
+      "price": 2500,
+      "offer": "15%",
+      "size": 10,
+      "stock": 75
+    },
+    {
+      "id": "12",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://www.superkicks.in/cdn/shop/files/5_8dc12df6-9887-429a-9868-0a41c1946f48.jpg?v=1721718864&width=600",
+      "brand": "Adidas",
+      "price": 3000,
+      "offer": "20%",
+      "size": 11,
+      "stock": 40
+    },
+    {
+      "id": "13",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/l/8/q/-original-imah4s2tpzebbjts.jpeg?q=70",
+      "brand": "Nike",
+      "price": 1999,
+      "offer": "25%",
+      "size": 9,
+      "stock": 60
+    },
+    {
+      "id": "14",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/q/l/w/-original-imah4zmyrcsxqp3b.jpeg?q=70",
+      "brand": "Adidas",
+      "price": 3500,
+      "offer": "30%",
+      "size": 10,
+      "stock": 70
+    },
+    {
+      "id": "15",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/m/b/l/-original-imah3s8xfakpyvce.jpeg?q=70",
+      "brand": "Nike",
+      "price": 2900,
+      "offer": "20%",
+      "size": 10,
+      "stock": 50
+    },
+    {
+      "id": "16",
+      "name": "sneaker Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/s/6/w/-original-imahfxt6uyvxmyf3.jpeg?q=70",
+      "brand": "Adidas",
+      "price": 3100,
+      "offer": "10%",
+      "size": 11,
+      "stock": 55
+    },
+    {
+      "id": "17",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/n/r/2/-original-imagx9kxgfyhguar.jpeg?q=70",
+      "brand": "Nike",
+      "price": 2700,
+      "offer": "35%",
+      "size": 9,
+      "stock": 40
+    },
+    {
+      "id": "18",
+      "name": "sneaker  Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/f/k/m/-original-imahfrsyzjnexatr.jpeg?q=70",
+      "brand": "Adidas",
+      "price": 4200,
+      "offer": "25%",
+      "size": 12,
+      "stock": 25
+    },
+    {
+      "id": "19",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://www.superkicks.in/cdn/shop/files/3_1e741e98-113c-4891-80c8-cfea3027abbb.jpg?v=1720610226&width=600",
+      "brand": "Nike",
+      "price": 3300,
+      "offer": "30%",
+      "size": 10,
+      "stock": 55
+    },
+    {
+      "id": "20",
+      "name": "casua Shoe",
+      "category": "men",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/f/d/c/-original-imahfqz8gp79k6uq.jpeg?q=70",
+      "brand": "Adidas",
+      "price": 2900,
+      "offer": "40%",
+      "size": 9,
+      "stock": 35
+    },
+    {
+      "id": "22",
+      "name": "Casual Shoe",
+      "category": "women",
+      "image": "https://admin.walkwayshoes.com/product/31-154/1080/31-154M45.jpg",
+      "brand": "Adidas",
+      "price": 2800,
+      "offer": "25%",
+      "size": 9,
+      "stock": 30
+    },
+    {
+      "id": "23",
+      "name": "Sneakers",
+      "category": "women",
+      "image": "/shoeimages/women2.jpg",
+      "brand": "Puma",
+      "price": 2700,
+      "offer": "20%",
+      "size": 7,
+      "stock": 40
+    },
+    {
+      "id": "24",
+      "name": "Sports Shoe",
+      "category": "women",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/k/a/e/-original-imahfqz3kajfajeb.jpeg?q=70",
+      "brand": "Puma",
+      "price": 2999,
+      "offer": "35%",
+      "size": 8,
+      "stock": 60
+    },
+    {
+      "id": "25",
+      "name": "Heels",
+      "category": "women",
+      "image": "/shoeimages/women3.jpg",
+      "brand": "Clarks",
+      "price": 2600,
+      "offer": "10%",
+      "size": 9,
+      "stock": 25
+    },
+    {
+      "id": "26",
+      "name": "Running Shoe",
+      "category": "women",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/u/o/v/-original-imah4zhajghy2dvz.jpeg?q=70",
+      "brand": "Under Armour",
+      "price": 2900,
+      "offer": "15%",
+      "size": 10,
+      "stock": 40
+    },
+    {
+      "id": "27",
+      "name": "Flats",
+      "category": "women",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/e/4/p/-original-imah49296vhfxfpe.jpeg?q=70",
+      "brand": "Puma",
+      "price": 2200,
+      "offer": "20%",
+      "size": 8,
+      "stock": 55
+    },
+    {
+      "id": "28",
+      "name": "Boots",
+      "category": "women",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/8/k/x/-original-imagtcqg7whphzvz.jpeg?q=70",
+      "brand": "Timberland",
+      "price": 2999,
+      "offer": "25%",
+      "size": 9,
+      "stock": 20
+    },
+    {
+      "id": "29",
+      "name": "Sandals",
+      "category": "women",
+      "image": "/shoeimages/women5.jpg",
+      "brand": "Hush Puppies",
+      "price": 1800,
+      "offer": "10%",
+      "size": 7,
+      "stock": 90
+    },
+    {
+      "id": "30",
+      "name": "Slip-On",
+      "category": "women",
+      "image": "/shoeimages/women4.jpg",
+      "brand": "Crocs",
+      "price": 1900,
+      "offer": "20%",
+      "size": 6,
+      "stock": 70
+    },
+    {
+      "id": "31",
+      "name": "Sports Sneakers",
+      "category": "women",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/h/6/r/5-311235-5-puma-black-matte-rose-gold-white-original-imah4tfknqrbfze9.jpeg?q=70",
+      "brand": "Puma",
+      "price": 2999,
+      "offer": "30%",
+      "size": 8,
+      "stock": 45
+    },
+    {
+      "id": "32",
+      "name": "Running Shoe",
+      "category": "women",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/s/4/n/-original-imahfhjztuywprkr.jpeg?q=70",
+      "brand": "Adidas",
+      "price": 2700,
+      "offer": "25%",
+      "size": 9,
+      "stock": 40
+    },
+    {
+      "id": "33",
+      "name": "Casual Flats",
+      "category": "women",
+      "image": "/shoeimages/women6.webp",
+      "brand": "Puma",
+      "price": 2500,
+      "offer": "20%",
+      "size": 7,
+      "stock": 35
+    },
+    {
+      "id": "34",
+      "name": "Sandals",
+      "category": "women",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/j/3/e/-original-imahfrsxyrydvf4d.jpeg?q=70",
+      "brand": "Reebok",
+      "price": 2200,
+      "offer": "35%",
+      "size": 8,
+      "stock": 60
+    },
+    {
+      "id": "36",
+      "name": "Lifestyle Shoe",
+      "category": "women",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/d/8/b/4-hrx-039-02-4-hrx-by-hrithik-roshan-sky-original-imah4ygdjaajrhqj.jpeg?q=70",
+      "brand": "Nike",
+      "price": 2800,
+      "offer": "15%",
+      "size": 10,
+      "stock": 55
+    },
+    {
+      "id": "37",
+      "name": "Running Shoe",
+      "category": "women",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/o/p/3/3-387067-3-puma-white-island-pink-deeva-peach-original-imah4zmhd2pyrhej.jpeg?q=70",
+      "brand": "Adidas",
+      "price": 2999,
+      "offer": "30%",
+      "size": 8,
+      "stock": 45
+    },
+    {
+      "id": "38",
+      "name": "Flats",
+      "category": "women",
+      "image": "/shoeimages/women7.webp",
+      "brand": "Aldo",
+      "price": 1900,
+      "offer": "20%",
+      "size": 7,
+      "stock": 35
+    },
+    {
+      "id": "39",
+      "name": "Boots",
+      "category": "women",
+      "image": "/shoeimages/women8.webp",
+      "brand": "Timberland",
+      "price": 2999,
+      "offer": "25%",
+      "size": 9,
+      "stock": 25
+    },
+    {
+      "id": "41",
+      "name": "Adidas Kids Sneaker",
+      "category": "kids",
+      "image": "/shoeimages/kids1.webp",
+      "brand": "Adidas",
+      "price": 2500,
+      "offer": "20%",
+      "size": 8,
+      "stock": 50
+    },
+    {
+      "id": "42",
+      "name": "Nike Baby Runner",
+      "category": "kids",
+      "image": "/shoeimages/kids2.webp",
+      "brand": "Nike",
+      "price": 2200,
+      "offer": "25%",
+      "size": 7,
+      "stock": 40
+    },
+    {
+      "id": "43",
+      "name": "Puma Little Explorer",
+      "category": "kids",
+      "image": "/shoeimages/kids3.webp",
+      "brand": "Puma",
+      "price": 2400,
+      "offer": "30%",
+      "size": 9,
+      "stock": 35
+    },
+    {
+      "id": "44",
+      "name": "Reebok Classic Kids",
+      "category": "kids",
+      "image": "/shoeimages/kids4.webp",
+      "brand": "Reebok",
+      "price": 2100,
+      "offer": "15%",
+      "size": 6,
+      "stock": 60
+    },
+    {
+      "id": "45",
+      "name": "Clarks Comfy Step",
+      "category": "kids",
+      "image": "/shoeimages/kids5.webp",
+      "brand": "Clarks",
+      "price": 2300,
+      "offer": "20%",
+      "size": 8,
+      "stock": 45
+    },
+    {
+      "id": "46",
+      "name": "Timberland Adventure Boot",
+      "category": "kids",
+      "image": "/shoeimages/kids6.jpg",
+      "brand": "Timberland",
+      "price": 2700,
+      "offer": "25%",
+      "size": 9,
+      "stock": 30
+    },
+    {
+      "id": "47",
+      "name": "Hush Puppies Playtime",
+      "category": "kids",
+      "image": "/shoeimages/kids7.jpg",
+      "brand": "Hush Puppies",
+      "price": 2000,
+      "offer": "10%",
+      "size": 7,
+      "stock": 70
+    },
+    {
+      "id": "48",
+      "name": "Crocs Sunshine Clog",
+      "category": "kids",
+      "image": "/shoeimages/kids8.jpg",
+      "brand": "Crocs",
+      "price": 1800,
+      "offer": "15%",
+      "size": 6,
+      "stock": 90
+    },
+    {
+      "id": "49",
+      "name": "Under Armour Swift Shoe",
+      "category": "kids",
+      "image": "/shoeimages/kids9.jpg",
+      "brand": "Under Armour",
+      "price": 2600,
+      "offer": "20%",
+      "size": 8,
+      "stock": 35
+    },
+    {
+      "id": "50",
+      "name": "Aldo Cool Kids Shoe",
+      "category": "kids",
+      "image": "/shoeimages/kids10.jpg",
+      "brand": "Aldo",
+      "price": 2400,
+      "offer": "25%",
+      "size": 7,
+      "stock": 55
+    },
+    {
+      "id": "51",
+      "name": "Aldo Cool Kids Shoe",
+      "category": "kids",
+      "image": "/shoeimages/kids11.webp",
+      "brand": "Aldo",
+      "price": 900,
+      "offer": "25%",
+      "size": 8,
+      "stock": 55
+    },
+    {
+      "id": "52",
+      "name": "Aldo Cool Kids Shoe",
+      "category": "kids",
+      "image": "/shoeimages/kids12.webp",
+      "brand": "Aldo",
+      "price": 1400,
+      "offer": "25%",
+      "size": 9,
+      "stock": 55
+    }
+  ]
+}
