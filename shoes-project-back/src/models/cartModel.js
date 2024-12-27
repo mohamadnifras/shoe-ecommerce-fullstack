@@ -19,10 +19,6 @@ const cartSchema = new mongoose.Schema({
             default:1,
         },
     }],
-    createAt:{
-        type:Date,
-        default:Date.now,
-    }
 })
 
 module.exports = mongoose.model('Cart', cartSchema)
