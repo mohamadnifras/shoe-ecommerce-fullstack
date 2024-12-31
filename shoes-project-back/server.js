@@ -5,12 +5,15 @@ const connectDB = require('./src/config/db')
 const cookieParser = require('cookie-parser')
 const productRoutes = require('./src/routes/productRoutes')
 const cartRoutes = require('./src/routes/cartRoutes')
+const errorHandler = require('./src/middlewares/errorHandler')
+const orderRoutes = require('./src/routes/orderRoutes')
 dotenv.config()
 const app = express()
 
 //middlewares
 app.use(express.json())
 app.use(cookieParser())
+
 
 //Connect to DB
 connectDB()
@@ -19,7 +22,10 @@ connectDB()
 app.use('/api/user', userRoutes)
 app.use('/api/user', productRoutes)
 app.use('/api/user', cartRoutes)
+app.use('/api/user', orderRoutes)
 
+//errorHandler
+// app.use(errorHandler);
 
 
 const PORT = process.env.PORT

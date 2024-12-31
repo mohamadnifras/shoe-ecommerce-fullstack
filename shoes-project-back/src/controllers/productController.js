@@ -8,7 +8,6 @@ exports.getProduct = asyncHandler(async (req, res) => {
     const { products, total } = await getProductsService({ page: parseInt(page), limit: parseInt(limit), name, category, id })
 
 
-
     return res.status(200).json({
         success: true,
         count: products.length,

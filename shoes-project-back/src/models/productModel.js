@@ -6,7 +6,6 @@ const productSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, 'product name required'],
-        unique:true
     },
     price: {
         type: String,
@@ -22,7 +21,7 @@ const productSchema = new mongoose.Schema({
     },
     brand: {
         type: String,
-        required: [true, 'product brand required']
+        required: [true, 'product brand required'] 
     },
     stock: {
         type: String,

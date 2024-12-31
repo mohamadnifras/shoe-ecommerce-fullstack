@@ -4,7 +4,7 @@ const User = require('../models/userModel')
 
 const authenticate = (async (req, res, next) => {
     try {
-        const token = req.cookie.accessToken;
+       let token = req.cookies.accessToken;
 
         if (!token) {
             throw new CustomError('Access denied. No token provided', 401)
@@ -21,9 +21,9 @@ const authenticate = (async (req, res, next) => {
         }
 
         next();
-    } catch (error) {
-        next(err);
-    }
+    } catch (err) {
+          return next(new CustomError('Access token expired, please refresh your token', 401));
+      }
 
 
 })
