@@ -35,8 +35,6 @@ const addProductToCart = async ({ userId, productId }) => {
         await cart.save();
     }
 
-
-
     return cart
 };
 
@@ -47,7 +45,7 @@ console.log(userId);
 
     const skip = (page - 1) * limit
     const cart = await Cart.findOne({ user: userId })
-        .populate('items.productId')
+        // .populate('items.productId')
         .skip(skip)
         .limit(limit);
     if (!cart) {

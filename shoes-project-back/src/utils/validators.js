@@ -12,7 +12,7 @@ const registerValidation = Joi.object({
       "any.required": `"Firstname" is a required field`,
     }),
   lastname: Joi.string()
-    .min(3)
+    .min(2)
     .max(20)
     .required()
     .messages({

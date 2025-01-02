@@ -52,6 +52,28 @@
           ],
           "total": 2623.95,
           "date": "12/4/2024, 3:14:35 PM"
+        },
+        {
+          "name": "nifras",
+          "address": "nifras123house",
+          "email": "mohamadnifras@gmail.com",
+          "phone": "6238896686",
+          "cartItems": [
+            {
+              "id": "8",
+              "name": "casua Shoe",
+              "category": "men",
+              "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/i/a/d/-original-imah4zkrfeh5p6sj.jpeg?q=70",
+              "brand": "Adidas",
+              "price": 2700,
+              "offer": "35%",
+              "size": 9,
+              "stock": 40,
+              "quantity": 1
+            }
+          ],
+          "total": 2835,
+          "date": "1/1/2025, 10:53:40 AM"
         }
       ]
     },
