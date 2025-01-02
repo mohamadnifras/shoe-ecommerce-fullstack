@@ -7,6 +7,7 @@ const productRoutes = require('./src/routes/productRoutes')
 const cartRoutes = require('./src/routes/cartRoutes')
 const errorHandler = require('./src/middlewares/errorHandler')
 const orderRoutes = require('./src/routes/orderRoutes')
+const adminRoutes =require('./src/routes/adminRoutes')
 dotenv.config()
 const app = express()
 
@@ -23,6 +24,10 @@ app.use('/api/user', userRoutes)
 app.use('/api/user', productRoutes)
 app.use('/api/user', cartRoutes)
 app.use('/api/user', orderRoutes)
+
+//Admin Routes
+app.use('/api/admin', adminRoutes)
+
 
 //errorHandler
 app.use(errorHandler);
