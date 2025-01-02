@@ -25,7 +25,7 @@ app.use('/api/user', cartRoutes)
 app.use('/api/user', orderRoutes)
 
 //errorHandler
-// app.use(errorHandler);
+app.use(errorHandler);
 
 
 const PORT = process.env.PORT

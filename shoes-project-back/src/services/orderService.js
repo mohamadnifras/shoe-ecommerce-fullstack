@@ -4,17 +4,16 @@ const CustomError = require('../utils/customError');
 const Order = require('../models/orderModel');
 const mongoose = require('mongoose')
 
+
+//create order
 const createOrder = async ({ userId, shippingAddress }) => {
 
-    const existingOrder = await Order.findOne({ 'shippingAddress.email': shippingAddress.email });
-    if (existingOrder) {
-        throw new CustomError('An order with this email already exists.')
+    const cart = await Cart.findOne({ user: userId });
+
+    if (!cart || !cart.items || cart.items.length == 0) {
+        throw new CustomError('Cart is empty. Please add items before placing an order.', 400);
     }
 
-    const cart = await Cart.findOne({ user: userId });
-    if (!cart || !cart.items || cart.items.length === 0) {
-        throw new CustomError('Cart is empty. Please Add item before placing an order.')
-    }
 
     let totalAmount = 0;
     for (const cartItem of cart.items) {
@@ -39,9 +38,24 @@ const createOrder = async ({ userId, shippingAddress }) => {
     });
 
     const saveOrder = await newOrder.save();
-    await Cart.findOneAndUpdate({ user: new mongoose.Types.ObjectId(userId) }, { $set: { items: [] } });
+    await Cart.findOneAndUpdate({ user: userId }, { $set: { items: [] } });
     return saveOrder
+}
 
+//get user Oreders 
+
+const getOrders = async ({ userId, page = 1, limit = 10 }) => {
+
+    const skip = (page - 1) * limit
+    const orders = await Order.find({ userId })
+        .populate('items.productId')
+        .skip(skip)
+        .limit(limit)
+
+    if (!orders.length) {
+        throw new CustomError('No orders found for this user', 404)
+    }
+    return orders
 }
 
 
@@ -51,4 +65,7 @@ const createOrder = async ({ userId, shippingAddress }) => {
 
 
 
-module.exports = { createOrder } 
+module.exports = { createOrder, getOrders }
+
+
+
