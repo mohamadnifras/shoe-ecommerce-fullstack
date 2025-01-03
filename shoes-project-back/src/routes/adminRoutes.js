@@ -7,7 +7,7 @@ const router = express.Router()
 
 router.get('/users', authMiddleware, isAdmin, getAllUsers)
 router.get('/users/:id', authMiddleware, isAdmin, getUserById)
-router.get('/products', authMiddleware, isAdmin,getProducts)
+
 
 
 

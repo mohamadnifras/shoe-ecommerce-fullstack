@@ -1,5 +1,5 @@
 const asyncHandler = require('../middlewares/asyncHandler')
-const { getProductsService } = require('../services/productService')
+const { getProductsService, addProduct } = require('../services/productService')
 
 exports.getProduct = asyncHandler(async (req, res) => {
     const { id } = req.params;
@@ -18,3 +18,23 @@ exports.getProduct = asyncHandler(async (req, res) => {
     })
 
 });
+
+exports.addproduct = asyncHandler(async(req,res)=>{
+    const productData = req.body
+    if(req.file && req.file.path){
+        productData.image = req.file.path;
+    }else{
+        return res.status(400).json({
+            success:false,
+            message:'Image upload failed. Please Include a Image file.',
+        })
+    }
+    const product = await addProduct(productData);
+
+    res.status(201).json({
+        success:true,
+        message:'Products add successfully',
+        product,
+    })
+})
+

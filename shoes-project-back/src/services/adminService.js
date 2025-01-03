@@ -30,41 +30,8 @@ const getUser = async (id) => {
     return user
 }
 
-//get all products and category
-const getAdminProductsService = async ({ page, limit, category }) => {
-    const skip = (page - 1) * limit
-
-    let match = { isDeleted: false };
-
-
-    if (category) {
-        match.category = { $regex: category, $options: 'i' }
-    }
-
-    if (id) {
-        match._id = new mongoose.Types.ObjectId(id)
-    }
-
-    const pipeline = [
-        { $match: match },
-        { $skip: skip },
-        { $limit: limit },
-    ];
-
-    const products = await Product.aggregate(pipeline)
-    console.log(products);
-    
-
-
-    if (id && products.length === 0) {
-        throw new CustomError('Product not found or is deleted', 404);
-    }
-
-    const total = await Product.countDocuments({ isDeleted: false, ...match });
-    return { products, total };
-
-}
 
 
 
-module.exports = { allUsersService, getUser, getAdminProductsService }
+
+module.exports = { allUsersService, getUser, }

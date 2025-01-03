@@ -27,6 +27,7 @@ app.use('/api/user', orderRoutes)
 
 //Admin Routes
 app.use('/api/admin', adminRoutes)
+app.use('/api/admin', productRoutes)
 
 
 //errorHandler

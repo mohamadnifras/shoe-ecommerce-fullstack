@@ -36,6 +36,17 @@ exports.getProductsService = async ({ page, limit, name, category, id }) => {
 
     const total = await Product.countDocuments({ isDeleted: false, ...match });
     return { products, total };
-   
-    
+ 
 };
+
+//addProduct
+exports.addProduct = async(productData)=>{
+
+    const existingProduct = await Product.findOne({name: productData.name})
+if(existingProduct){
+    throw new CustomError('already Product exists', 400)
+}
+
+const product = await Product.create(productData);
+return product
+}

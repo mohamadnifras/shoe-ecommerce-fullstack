@@ -19,19 +19,3 @@ exports.getUserById = asyncHandler(async (req, res) => {
     res.status(201).json(user)
 })
 
-//get allProducts
-exports.getProducts = asyncHandler(async (req, res) => {
-    const { id } = req.params;
-    const { page = 1, limit = 15, category } = req.query;
-    const { products, total } = await adminService.getAdminProductsService({ page: parseInt(page), limit: parseInt(limit), category, id })
-
-
-    return res.status(200).json({
-        success: true,
-        count: products.length,
-        total,
-        page: Math.ceil(total / limit),
-        currentPage: parseInt(page),
-        products,
-    })
-})
