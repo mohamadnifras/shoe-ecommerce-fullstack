@@ -1,5 +1,5 @@
+require('dotenv').config();
 const express = require('express')
-const dotenv = require('dotenv')
 const userRoutes = require('./src/routes/userRoutes')
 const connectDB = require('./src/config/db')
 const cookieParser = require('cookie-parser')
@@ -8,7 +8,8 @@ const cartRoutes = require('./src/routes/cartRoutes')
 const errorHandler = require('./src/middlewares/errorHandler')
 const orderRoutes = require('./src/routes/orderRoutes')
 const adminRoutes =require('./src/routes/adminRoutes')
-dotenv.config()
+
+
 const app = express()
 
 //middlewares

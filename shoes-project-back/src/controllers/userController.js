@@ -9,6 +9,8 @@ exports.registerUser = asyncHandler(async (req, res) => {
     const { error } = registerValidation.validate({ firstname, lastname, email, password, confirmPassword });
     if (error) throw new CustomError(error.details[0].message, 400);
     const user = await userRegisterServices({ firstname, lastname, email, password })
+    console.log(user);
+    
 
     //send response
     res.status(201).json({

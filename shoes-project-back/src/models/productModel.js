@@ -8,7 +8,7 @@ const productSchema = new mongoose.Schema({
         required: [true, 'product name required'],
     },
     price: {
-        type: String,
+        type: Number,
         required: [true, 'product price required']
     },
     image: {
@@ -24,11 +24,11 @@ const productSchema = new mongoose.Schema({
         required: [true, 'product brand required'] 
     },
     stock: {
-        type: String,
+        type: Number,
         required: [true, 'product stock required']
     },
     size: {
-        type: String,
+        type: Number,
         required: [true, 'product size required']
     },
     offer: {

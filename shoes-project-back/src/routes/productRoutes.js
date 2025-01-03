@@ -12,7 +12,7 @@ router.get('/product', productDetail.getProduct)
 router.get('/product/:id', productDetail.getProduct)
 
 // Admin side 
-router.post('/addproduct',authMiddleware,isAdmin,upload.single('image'),productDetail.addproduct)
+router.post('/addProduct', authMiddleware, isAdmin, upload.single('image'), productDetail.addProduct)
 
 
 module.exports = router
