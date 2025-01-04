@@ -50,3 +50,29 @@ exports.addProductService = async (productData) => {
     const product = await Product.create(productData);
     return product
 }
+
+//Admin deletedProduct
+exports.deletedProductService = async (id) => {
+    const productDeleted = await Product.findByIdAndUpdate(id, { isDeleted: true }, { new: true });
+
+    if (!productDeleted) {
+        throw new CustomError('Product Not found', 404)
+    }
+    return productDeleted
+}
+
+//Admin EditProduct
+exports.editProductService = async (id, updateData) => {
+
+    const productUpdate = await Product.findByIdAndUpdate(
+        { _id: id, isDeleted: false },
+        { $set: { ...updateData } },
+        { new: true }
+    )
+
+    if(!productUpdate){
+        throw new CustomError('Product not found', 404)
+    }
+
+    return productUpdate
+}

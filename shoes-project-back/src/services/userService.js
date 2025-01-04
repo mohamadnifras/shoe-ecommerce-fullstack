@@ -29,6 +29,11 @@ exports.userLoginServices = async ({ email, password }) => {
     if (!user) {
         throw new CustomError('Invalid email or password', 'Please create an account', 400)
     }
+
+    if(user.blocked){
+        throw new CustomError('Your account has been blocked. Please contact support.', 403);
+    }
+    
     const isMatch = await user.comparePassword(password)
     if (!isMatch) {
         throw new CustomError('Invalid email or password', 400)

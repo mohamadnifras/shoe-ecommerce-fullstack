@@ -1,5 +1,6 @@
 const asyncHandler = require('../middlewares/asyncHandler')
-const { getProductsService, addProductService } = require('../services/productService')
+const { getProductsService, addProductService, deletedProductService, editProductService } = require('../services/productService')
+
 
 exports.getProduct = asyncHandler(async (req, res) => {
     const { id } = req.params;
@@ -19,29 +20,54 @@ exports.getProduct = asyncHandler(async (req, res) => {
 
 });
 
-exports.addProduct = asyncHandler(async(req,res)=>{
+//Admin addProduct
+exports.addProduct = asyncHandler(async (req, res) => {
     const productData = req.body
-    console.log(req.body);
-    
-    
-    if(req.file && req.file.path){
+
+    if (req.file && req.file.path) {
         productData.image = req.file.path;
-        console.log(productData);
-        
-    }else{
+       
+
+    } else {
         return res.status(400).json({
-            success:false,
-            message:'Image upload failed. Please Include a Image file.',
+            success: false,
+            message: 'Image upload failed. Please Include a Image file.',
         })
     }
     const product = await addProductService(productData);
-    
-    
+
+
 
     res.status(201).json({
-        success:true,
-        message:'Products add successfully',
+        success: true,
+        message: 'Products add successfully',
         product,
     })
 })
 
+//Deleted product
+exports.deletedProduct = asyncHandler(async (req, res) => {
+    const { id } = req.params;
+    await deletedProductService(id);
+
+    res.status(200).json({
+        success: true,
+        message: 'Product deleted successfully'
+    })
+});
+
+//EditProduct 
+exports.editProduct = asyncHandler(async (req, res) => {
+    const { id } = req.params;
+    const  updateData  = req.body
+
+    if(req.file){
+        updateData.image = req.file.path
+    }
+    const productUpdate = await editProductService(id, updateData);
+
+    res.status(200).json({
+        message: "Product Update successfully",
+        productUpdate
+    })
+})

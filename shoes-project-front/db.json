@@ -169,17 +169,6 @@
       "stock": "40"
     },
     {
-      "id": "3",
-      "name": "casua Shoe",
-      "category": "men",
-      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/5/f/s/-original-imah46kbesfekgu6.jpeg?q=70",
-      "brand": "Nike",
-      "price": 2999,
-      "offer": "25%",
-      "size": 11,
-      "stock": 75
-    },
-    {
       "id": "4",
       "name": "casua Shoe",
       "category": "men",
@@ -673,6 +662,17 @@
       "offer": "25%",
       "size": 9,
       "stock": 55
+    },
+    {
+      "id": "be3c",
+      "name": "casua shoes",
+      "category": "man",
+      "image": "https://t4.ftcdn.net/jpg/04/39/60/05/360_F_439600528_2FWTMQDiXYv6T0qolS57KSxiNbqlhDTa.webp",
+      "brand": "nike",
+      "price": "12345",
+      "offer": "20%",
+      "size": "9",
+      "stock": "10"
     }
   ]
 }

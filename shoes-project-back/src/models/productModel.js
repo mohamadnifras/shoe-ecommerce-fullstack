@@ -21,7 +21,7 @@ const productSchema = new mongoose.Schema({
     },
     brand: {
         type: String,
-        required: [true, 'product brand required'] 
+        required: [true, 'product brand required']
     },
     stock: {
         type: Number,
@@ -29,7 +29,8 @@ const productSchema = new mongoose.Schema({
     },
     size: {
         type: Number,
-        required: [true, 'product size required']
+        enum: [5, 6, 7, 8, 9, 10],
+        required: [true, 'product size required'],
     },
     offer: {
         type: String,
@@ -39,7 +40,7 @@ const productSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     }
-}, 
+},
     { timestamps: true }
 );
 

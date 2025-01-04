@@ -19,3 +19,18 @@ exports.getUserById = asyncHandler(async (req, res) => {
     res.status(201).json(user)
 })
 
+//blockAndUnblockUser
+exports.blockAndUnblockUser = asyncHandler(async(req,res)=>{
+    const {id} = req.params;
+    const user = await adminService.blockAndUnblockService(id);
+
+    res.status(200).json(
+        // message: user.blocked ? 'User blocked' : 'User unblocked'
+        user
+    )
+})
+
+exports.getAllOrders = asyncHandler(async(req,res)=>{
+    
+})
+

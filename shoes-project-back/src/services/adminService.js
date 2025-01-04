@@ -1,7 +1,5 @@
 const User = require('../models/userModel')
-const Cart = require('../models/cartModel')
-const Product = require('../models/productModel')
-const CustomError = require('../utils/customError')
+const CustomError = require('../utils/customError');
 
 //all users service
 const allUsersService = async ({ page, limit }) => {
@@ -30,8 +28,19 @@ const getUser = async (id) => {
     return user
 }
 
+///blockAndUnblockUser
+const blockAndUnblockService = async(id)=>{
+     const user = await User.findById(id)
+     if(!user){
+        throw new CustomError('User not found')
+     }
+     user.blocked = !user.blocked
+     await user.save()
+     return user
+}
 
 
 
 
-module.exports = { allUsersService, getUser, }
+
+module.exports = { allUsersService, getUser, blockAndUnblockService}
