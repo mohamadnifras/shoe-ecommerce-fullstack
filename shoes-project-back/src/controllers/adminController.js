@@ -20,8 +20,8 @@ exports.getUserById = asyncHandler(async (req, res) => {
 })
 
 //blockAndUnblockUser
-exports.blockAndUnblockUser = asyncHandler(async(req,res)=>{
-    const {id} = req.params;
+exports.blockAndUnblockUser = asyncHandler(async (req, res) => {
+    const { id } = req.params;
     const user = await adminService.blockAndUnblockService(id);
 
     res.status(200).json(
@@ -30,7 +30,13 @@ exports.blockAndUnblockUser = asyncHandler(async(req,res)=>{
     )
 })
 
-exports.getAllOrders = asyncHandler(async(req,res)=>{
-    
+
+
+//Total Revenue
+exports.getTotalRevenue = asyncHandler(async(req,res)=>{
+     const totalRevenue = await adminService.revenueService()
+
+     res.status(201).json(totalRevenue)
 })
+
 

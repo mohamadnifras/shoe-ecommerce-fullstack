@@ -27,17 +27,16 @@ const orderSchema = new mongoose.Schema({
         phone: { type: Number, required: true }
     },
     totalAmount: { type: Number, required: true },
-    orderStatus: {
+    Status: {
         type: String,
         enum: ['pending', 'shipped', 'delivered', 'cancelled'],
-        default: 'pending',
     },
     paymentStatus: {
         type: String,
         enum: ['pending', 'shipped', 'delivered', 'cancelled'],
         default: 'pending'
     },
-    createdAt: { type: Date, default: Date.now }
+    createdAt: { type: Date, default: Date.now }  
 })
 
 

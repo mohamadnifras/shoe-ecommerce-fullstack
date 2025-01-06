@@ -1,5 +1,4 @@
 const asyncHandler = require('../middlewares/asyncHandler');
-const user = require('../models/userModel');
 const orderService = require('../services/orderService')
 
 //add to order
@@ -24,6 +23,25 @@ exports.getUserOrder = asyncHandler(async(req,res)=>{
         message:"Orders success",orders
     })
 })
+
+//AllOrders
+exports.getAllOrders = asyncHandler(async (req, res) => {
+    const { page = 1, limit = 10 } = req.query;
+    const allOrder = await orderService.allOrderService(page, limit);
+
+    res.status(201).json(allOrder)  
+})
+
+
+
+//Admin userOrder
+exports.getUserOrderById = asyncHandler(async(req,res)=>{
+    const {userId} = req.params;
+    const userOrder = await orderService.userOrderService(userId)
+
+    res.status(201).json(userOrder)
+})
+
 
 
 

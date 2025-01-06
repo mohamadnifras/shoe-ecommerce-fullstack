@@ -2,7 +2,7 @@ const Cart = require('../models/cartModel');
 const Product = require('../models/productModel');
 const CustomError = require('../utils/customError');
 const Order = require('../models/orderModel');
-const mongoose = require('mongoose')
+
 
 
 //create order
@@ -59,13 +59,38 @@ const getOrders = async ({ userId, page = 1, limit = 10 }) => {
 }
 
 
+//Admin All Order 
+const allOrderService = async (page, limit) => {
+    const skip = (page - 1)
+    const allOrder = await Order.find().populate('items.productId').skip(skip).limit(limit)
+    const totalOrder = await Order.countDocuments()
+    return {
+        allOrder,
+        currentPage: page,
+        totalPage: Math.ceil(totalOrder / limit),
+        totalOrder
+    };
+};
+
+//Admin userOrder 
+const userOrderService = async (userId) => {
+    const userOrder = await Order.find({ userId: userId }).sort({ createdAt: -1 }).populate('items.productId')
+    if (!userOrder) {
+        throw new CustomError('Order not fount', 404)
+    }
+    return { userOrder }
+}
 
 
 
 
 
 
-module.exports = { createOrder, getOrders }
+
+
+
+
+module.exports = { createOrder, getOrders, userOrderService,allOrderService }
 
 
 

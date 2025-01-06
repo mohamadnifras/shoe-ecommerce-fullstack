@@ -1,5 +1,6 @@
 const User = require('../models/userModel')
 const CustomError = require('../utils/customError');
+const Order = require('../models/orderModel')
 
 //all users service
 const allUsersService = async ({ page, limit }) => {
@@ -29,18 +30,25 @@ const getUser = async (id) => {
 }
 
 ///blockAndUnblockUser
-const blockAndUnblockService = async(id)=>{
-     const user = await User.findById(id)
-     if(!user){
+const blockAndUnblockService = async (id) => {
+    const user = await User.findById(id)
+    if (!user) {
         throw new CustomError('User not found')
-     }
-     user.blocked = !user.blocked
-     await user.save()
-     return user
+    }
+    user.blocked = !user.blocked
+    await user.save()
+    return user
+}
+
+
+
+//Total Revenue
+const revenueService = async () => {
+    const totalRevenue = await Order.aggregate([{ $group: { _id: null, totalRevenue: { $sum: '$totalAmount' } } }])
+    return totalRevenue
 }
 
 
 
 
-
-module.exports = { allUsersService, getUser, blockAndUnblockService}
+module.exports = { allUsersService, getUser, blockAndUnblockService, revenueService }

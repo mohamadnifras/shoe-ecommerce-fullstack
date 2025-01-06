@@ -7,7 +7,8 @@ const productRoutes = require('./src/routes/productRoutes')
 const cartRoutes = require('./src/routes/cartRoutes')
 const errorHandler = require('./src/middlewares/errorHandler')
 const orderRoutes = require('./src/routes/orderRoutes')
-const adminRoutes =require('./src/routes/adminRoutes')
+const adminRoutes = require('./src/routes/adminRoutes')
+const wishlistRoutes = require('./src/routes/wishlistRoutes')
 
 
 const app = express()
@@ -25,10 +26,12 @@ app.use('/api/user', userRoutes)
 app.use('/api/user', productRoutes)
 app.use('/api/user', cartRoutes)
 app.use('/api/user', orderRoutes)
+app.use('/api/user', wishlistRoutes)
 
 //Admin Routes
 app.use('/api/admin', adminRoutes)
 app.use('/api/admin', productRoutes)
+app.use('/api/admin', orderRoutes)
 
 
 //errorHandler
