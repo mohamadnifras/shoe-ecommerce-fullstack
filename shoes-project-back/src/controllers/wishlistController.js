@@ -24,7 +24,7 @@ exports.removeWishlist =  asyncHandler(async(req,res)=>{
     res.status(200).json({
         message:'Product removed from wishlist successfully',
         wishlist
-    })
+   })
 })
 
 //cleareWishlist
@@ -38,4 +38,4 @@ exports.cleareWishlist = asyncHandler(async(req,res)=>{
         message:'Wishlist cleared successfully',
         wishlist
     })
-})
+})               

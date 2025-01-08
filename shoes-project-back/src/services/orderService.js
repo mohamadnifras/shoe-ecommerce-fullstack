@@ -8,7 +8,7 @@ const Order = require('../models/orderModel');
 //create order
 const createOrder = async ({ userId, shippingAddress }) => {
 
-    const cart = await Cart.findOne({ user: userId });
+    const cart = await Cart.findOne({ userId: userId });
 
     if (!cart || !cart.items || cart.items.length == 0) {
         throw new CustomError('Cart is empty. Please add items before placing an order.', 400);

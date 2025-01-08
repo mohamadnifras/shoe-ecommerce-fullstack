@@ -9,11 +9,20 @@ const errorHandler = require('./src/middlewares/errorHandler')
 const orderRoutes = require('./src/routes/orderRoutes')
 const adminRoutes = require('./src/routes/adminRoutes')
 const wishlistRoutes = require('./src/routes/wishlistRoutes')
+const cors = require('cors')
 
 
 const app = express()
 
-//middlewares
+const  originsPort  = process.env.ORIGINS_PORT;
+
+const corsOptions = {
+    origin:originsPort,
+    methods:['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+    credentials: true,
+}
+
+app.use(cors(corsOptions))
 app.use(express.json())
 app.use(cookieParser())
 
