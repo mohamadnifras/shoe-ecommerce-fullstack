@@ -35,7 +35,9 @@ exports.getProductsService = async ({ page, limit, name, category, id }) => {
     }
 
     const total = await Product.countDocuments({ isDeleted: false, ...match });
-    return { products, total };
+    const totalManProduct = await Product.countDocuments({ isDeleted: false, category: 'men' });
+    const totalWomenProduct = await Product.countDocuments({ isDeleted: false, category:'women' });
+    return { products, total, totalManProduct, totalWomenProduct};
 
 };
 

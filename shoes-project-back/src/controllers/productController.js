@@ -6,7 +6,7 @@ exports.getProduct = asyncHandler(async (req, res) => {
     const { id } = req.params;
     const { page = 1, limit = 15, name, category } = req.query;
 
-    const { products, total } = await getProductsService({ page: parseInt(page), limit: parseInt(limit), name, category, id })
+    const { products, total, totalManProduct, totalWomenProduct } = await getProductsService({ page: parseInt(page), limit: parseInt(limit), name, category, id })
 
 
     return res.status(200).json({
@@ -15,6 +15,8 @@ exports.getProduct = asyncHandler(async (req, res) => {
         total,
         page: Math.ceil(total / limit),
         currentPage: parseInt(page),
+        totalManProduct,
+        totalWomenProduct,
         products,
     })
 
@@ -26,7 +28,7 @@ exports.addProduct = asyncHandler(async (req, res) => {
 
     if (req.file && req.file.path) {
         productData.image = req.file.path;
-       
+
 
     } else {
         return res.status(400).json({
@@ -59,9 +61,9 @@ exports.deletedProduct = asyncHandler(async (req, res) => {
 //EditProduct 
 exports.editProduct = asyncHandler(async (req, res) => {
     const { id } = req.params;
-    const  updateData  = req.body
+    const updateData = req.body
 
-    if(req.file){
+    if (req.file) {
         updateData.image = req.file.path
     }
     const productUpdate = await editProductService(id, updateData);

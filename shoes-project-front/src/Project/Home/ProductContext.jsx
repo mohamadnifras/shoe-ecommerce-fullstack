@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { createContext, useEffect, useState } from 'react'
 import { useContext } from 'react'
-import { passContext } from '../RegisterAnsLogin/RegisterContext'
+// import { passContext } from '../RegisterAnsLogin/RegisterContext'
 
 export const productContext = createContext()
 function ProductContext({children}) {
@@ -9,7 +9,7 @@ function ProductContext({children}) {
     const [cart, setCart] = useState([]);
     const [orders,setOrders]=useState([])
     const [search,setSearch]=useState('')
-    const {user}=useContext(passContext)
+    // const {user}=useContext(passContext)
     useEffect(()=>{
         const fecthProduct = async () =>{
         try{

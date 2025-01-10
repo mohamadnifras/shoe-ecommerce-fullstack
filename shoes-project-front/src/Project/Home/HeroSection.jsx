@@ -7,7 +7,7 @@ function HeroSection() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 600,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -16,28 +16,28 @@ function HeroSection() {
   };
 
   return (
-    <div className="flex items-center justify-center w-full h-screen bg-gradient-to-r from-gray-100 to-gray-200">
-      <div className="w-full max-w-[800px] h-auto shadow-lg overflow-hidden rounded-md">
+    <div className="flex items-center justify-center w-full h-screen ">
+      <div className="w-[90%] max-w-[1200px]">
         <Slider {...settings}>
           <div>
             <img
               src="/shoeimages/homepage3.png"
               alt="Shoe 1"
-              className="w-full h-[400px] object-cover"
+              className="w-full h-[600px] object-cover rounded-xl"
             />
           </div>
           <div>
             <img
               src="/shoeimages/homepage2.png"
               alt="Shoe 2"
-              className="w-full h-[400px] object-cover"
+              className="w-full h-[600px] object-cover rounded-xl"
             />
           </div>
           <div>
             <img
               src="/shoeimages/homepage4.jpg"
               alt="Shoe 3"
-              className="w-full h-[400px] object-cover"
+              className="w-full h-[600px] object-cover rounded-xl"
             />
           </div>
         </Slider>

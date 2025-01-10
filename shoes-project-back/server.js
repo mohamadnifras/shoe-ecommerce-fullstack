@@ -14,7 +14,7 @@ const cors = require('cors')
 
 const app = express()
 
-const  originsPort  = process.env.ORIGINS_PORT;
+const  originsPort  = process.env.CLIENT_URL;
 
 const corsOptions = {
     origin:originsPort,

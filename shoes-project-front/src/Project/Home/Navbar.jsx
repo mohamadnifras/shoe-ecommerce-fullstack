@@ -8,14 +8,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons/faCircleUser";
 import { Button, Menu, MenuItem } from "@mui/material";
-import { passContext } from "../RegisterAnsLogin/RegisterContext";
+// import { passContext } from "../RegisterAnsLogin/RegisterContext";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Navbar() {
   const { setSearch, cart, setCart } = useContext(productContext);
   const [anchorEl, setAnchorEl] = useState(null);
-  const { user, logout } = useContext(passContext);
+  // const { user, logout } = useContext(passContext);
   const navigate = useNavigate();
 
   const handleSearchChange = (e) => {

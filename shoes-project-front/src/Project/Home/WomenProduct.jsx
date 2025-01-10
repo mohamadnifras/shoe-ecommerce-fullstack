@@ -50,7 +50,7 @@
 
 
 
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { productContext } from "./ProductContext";
 import Navbar from "./Navbar";
 

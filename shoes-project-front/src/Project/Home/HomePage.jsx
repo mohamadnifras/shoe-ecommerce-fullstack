@@ -1,10 +1,6 @@
-
-import React, { useContext, useEffect, useState } from 'react';
-import Navbar from './Navbar';
+import React, { useContext,useState } from 'react';
 import { productContext } from './ProductContext';
-import LastPage from './LastPage';
 import Modal from "react-modal";
-import HeroSection from './HeroSection';
 
 
 
@@ -24,8 +20,8 @@ function HomePage() {
   
   return (
     <div className='bg-gray-100 '>
-      <Navbar />
-    <HeroSection/>
+      {/* <Navbar /> */}
+    {/* <HeroSection/> */}
     <div className="flex flex-wrap justify-center w-full gap-6 p-4">
   {filteredProduct.map((item) => (
     <div
@@ -143,7 +139,7 @@ function HomePage() {
 
 
     
-      <LastPage/>
+      {/* <LastPage/> */}
     </div>
   );
 }
